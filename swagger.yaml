@@ -42,7 +42,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Errors'
-  /tokens/(token_address):
+  /tokens/{token_address}:
     get:
       summary: Address of the corresponding token network 
       description: Returns the address of the corresponding token network for the given token, if the token is registered.
@@ -114,12 +114,19 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Errors'
-  /tokens/(token_address)/partners:
+  /tokens/{token_address}/partners:
     get:
       summary: List of all partners with whom you have non-settled channels 
       description: Returns a list of all partners with whom you have non-settled channels for a certain token.
       tags: 
         - Tokens
+      parameters:
+        - in: path
+          name: token_address
+          schema:
+            type: string
+          required: true
+          description: The token address associated with a token network
       operationId: getTokenPartners
       responses:
         '200':

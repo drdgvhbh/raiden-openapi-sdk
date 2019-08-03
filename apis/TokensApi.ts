@@ -25,6 +25,10 @@ export interface GetTokenRequest {
   tokenAddress: string;
 }
 
+export interface GetTokenPartnersRequest {
+  tokenAddress: string;
+}
+
 export interface RegisterTokenRequest {
   tokenAddress: string;
 }
@@ -45,7 +49,7 @@ export class TokensApi extends BaseAPI {
     const query: HttpQuery = {};
 
     return this.request<string>({
-      path: `/tokens/(token_address)`.replace(
+      path: `/tokens/{token_address}`.replace(
         `{token_address}`,
         encodeURIComponent(String(requestParameters.tokenAddress)),
       ),
@@ -59,13 +63,20 @@ export class TokensApi extends BaseAPI {
    * Returns a list of all partners with whom you have non-settled channels for a certain token.
    * List of all partners with whom you have non-settled channels
    */
-  getTokenPartners = (): Observable<Array<Partner>> => {
+  getTokenPartners = (
+    requestParameters: GetTokenPartnersRequest,
+  ): Observable<Array<Partner>> => {
+    throwIfRequired(requestParameters, 'tokenAddress', 'getTokenPartners');
+
     const headers: HttpHeaders = {};
 
     const query: HttpQuery = {};
 
     return this.request<Array<Partner>>({
-      path: `/tokens/(token_address)/partners`,
+      path: `/tokens/{token_address}/partners`.replace(
+        `{token_address}`,
+        encodeURIComponent(String(requestParameters.tokenAddress)),
+      ),
       method: 'GET',
       headers,
       query,
@@ -102,7 +113,7 @@ export class TokensApi extends BaseAPI {
     const query: HttpQuery = {};
 
     return this.request<TokenNetworkAddress>({
-      path: `/tokens/(token_address)`.replace(
+      path: `/tokens/{token_address}`.replace(
         `{token_address}`,
         encodeURIComponent(String(requestParameters.tokenAddress)),
       ),
