@@ -31,7 +31,7 @@ export interface ChannelAllOf {
    */
   tokenNetworkIdentifier: string;
   /**
-   * Amount of the token_address token we have available for payments.
+   * Amount of the `token_address` token we have available for payments.
    * @type {number}
    * @memberof ChannelAllOf
    */

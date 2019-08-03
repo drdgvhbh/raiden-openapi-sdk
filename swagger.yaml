@@ -892,7 +892,7 @@ components:
               example: "0x2a65Aca4D5fC5B5C859090a6c34d164135398226"
             balance:
               type: integer
-              description: Amount of the token_address token we have available for payments.
+              description: Amount of the `token_address` token we have available for payments.
               example: 25000000
             total_withdraw:
               $ref: '#/components/schemas/TotalWithdraw'
