@@ -875,6 +875,7 @@ components:
         - settle_timeout
     ChannelState:
       type: string
+      description: "Current state of the channel"
       enum: ['opened', 'closed', 'settled']
       example: 'opened'
     Channel:

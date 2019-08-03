@@ -12,7 +12,7 @@
  */
 
 /**
- *
+ * Current state of the channel
  * @export
  * @enum {string}
  */
