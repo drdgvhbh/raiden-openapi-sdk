@@ -19,19 +19,19 @@ import { ChannelAllOf, ChannelPartial, ChannelState } from './';
  */
 export interface Channel {
   /**
-   * EIP55-encoded address of the partner with whom we have opened a channel
+   * [EIP55](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-55.md)-encoded address of the partner with whom we have opened a channel
    * @type {string}
    * @memberof Channel
    */
   partnerAddress: string;
   /**
-   * EIP55-encoded address of the token we are trading in the channel
+   * [EIP55](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-55.md)-encoded address of the token we are trading in the channel
    * @type {string}
    * @memberof Channel
    */
   tokenAddress: string;
   /**
-   * Amount of the token_address token we have deposited into the contract for this channel.
+   * Amount of the `token_address` token we have deposited into the contract for this channel.
    * @type {number}
    * @memberof Channel
    */
@@ -43,13 +43,13 @@ export interface Channel {
    */
   settleTimeout: number;
   /**
-   * identifier of the channel
+   * Identifier of the channel
    * @type {number}
    * @memberof Channel
    */
   channelIdentifier: number;
   /**
-   * EIP55-encoded address of the token network the channel is part of
+   * [EIP55](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-55.md)-encoded address of the token network the channel is part of
    * @type {string}
    * @memberof Channel
    */
@@ -61,7 +61,7 @@ export interface Channel {
    */
   balance: number;
   /**
-   * Amount of the token_address token we have withdrawn into the contract for this channel.
+   * Amount of the `token_address` token we have withdrawn into the contract for this channel.
    * @type {number}
    * @memberof Channel
    */

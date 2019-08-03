@@ -19,13 +19,13 @@ import { ChannelState } from './';
  */
 export interface ChannelAllOf {
   /**
-   * identifier of the channel
+   * Identifier of the channel
    * @type {number}
    * @memberof ChannelAllOf
    */
   channelIdentifier: number;
   /**
-   * EIP55-encoded address of the token network the channel is part of
+   * [EIP55](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-55.md)-encoded address of the token network the channel is part of
    * @type {string}
    * @memberof ChannelAllOf
    */
@@ -37,7 +37,7 @@ export interface ChannelAllOf {
    */
   balance: number;
   /**
-   * Amount of the token_address token we have withdrawn into the contract for this channel.
+   * Amount of the `token_address` token we have withdrawn into the contract for this channel.
    * @type {number}
    * @memberof ChannelAllOf
    */

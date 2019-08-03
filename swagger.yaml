@@ -321,7 +321,7 @@ paths:
               schema: 
                 $ref: '#/components/schemas/Errors'
         '404':
-          description: "The given token and / or partner addresses are not valid eip55-encoded Ethereum addresses"
+          description: "The given token and / or partner addresses are not valid [EIP55](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-55.md)-encoded Ethereum addresses"
           content:
             application/json:
               schema: 
@@ -501,7 +501,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Errors'
         '404':
-          description: "The given token address is not a valid eip55-encoded Ethereum address"
+          description: "The given token address is not a valid [EIP55](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-55.md)-encoded Ethereum address"
           content:
             application/json:
               schema:
@@ -551,7 +551,7 @@ paths:
                 '0x5A5f458F6c1a034930E45dC9a64B99d7def06D7E', 
                 '0x8942c06FaA74cEBFf7d55B79F9989AdfC85C6b85']
         '404':
-          description: "The given token address is not a valid eip55-encoded Ethereum address"
+          description: "The given token address is not a valid [EIP55](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-55.md)-encoded Ethereum address"
           content:
             application/json:
               schema:
@@ -606,7 +606,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/PaymentEvent'
         '404':
-          description: "The given token and / or partner addresses are not valid eip55-encoded Ethereum addresses"
+          description: "The given token and / or partner addresses are not valid [EIP55](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-55.md)-encoded Ethereum addresses"
           content:
             application/json:
               schema:
@@ -652,13 +652,13 @@ paths:
                 items:
                   $ref: '#/components/schemas/PaymentEvent'
         '404':
-          description: "The given token and / or partner addresses are not valid eip55-encoded Ethereum addresses"
+          description: "The given token and / or partner addresses are not valid [EIP55](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-55.md)-encoded Ethereum addresses"
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Errors'
         '409':
-          description: "If the given block number or token_address arguments are invalid"
+          description: "If the given `block number` or `token_address` arguments are invalid"
           content:
             application/json:
               schema:
@@ -806,10 +806,10 @@ components:
     TotalWithdraw:
       type: integer
       example: 5000000
-      description: Amount of the token_address token we have withdrawn into the contract for this channel.
+      description: "Amount of the `token_address` token we have withdrawn into the contract for this channel."
     TotalDeposit:
       type: integer
-      description: Amount of the token_address token we have deposited into the contract for this channel.
+      description: "Amount of the `token_address` token we have deposited into the contract for this channel."
       example: 35000000
     IncreaseWithdraw:
       type: integer
@@ -856,11 +856,11 @@ components:
       properties:
         partner_address:
           type: string
-          description: EIP55-encoded address of the partner with whom we have opened a channel
+          description: "[EIP55](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-55.md)-encoded address of the partner with whom we have opened a channel"
           example: "0x61C808D82A3Ac53231750daDc13c777b59310bD9"
         token_address:
           type: string
-          description: EIP55-encoded address of the token we are trading in the channel
+          description: "[EIP55](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-55.md)-encoded address of the token we are trading in the channel"
           example: "0xEA674fdDe714fd979de3EdF0F56AA9716B898ec8"
         total_deposit:
           $ref: '#/components/schemas/TotalDeposit'
@@ -884,15 +884,15 @@ components:
           properties:
             channel_identifier:
               type: integer
-              description: identifier of the channel
+              description: Identifier of the channel
               example: 21
             token_network_identifier:
               type: string
-              description: EIP55-encoded address of the token network the channel is part of
+              description: "[EIP55](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-55.md)-encoded address of the token network the channel is part of"
               example: "0x2a65Aca4D5fC5B5C859090a6c34d164135398226"
             balance:
               type: integer
-              description: Amount of the `token_address` token we have available for payments.
+              description: "Amount of the `token_address` token we have available for payments."
               example: 25000000
             total_withdraw:
               $ref: '#/components/schemas/TotalWithdraw'

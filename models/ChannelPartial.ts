@@ -17,19 +17,19 @@
  */
 export interface ChannelPartial {
   /**
-   * EIP55-encoded address of the partner with whom we have opened a channel
+   * [EIP55](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-55.md)-encoded address of the partner with whom we have opened a channel
    * @type {string}
    * @memberof ChannelPartial
    */
   partnerAddress: string;
   /**
-   * EIP55-encoded address of the token we are trading in the channel
+   * [EIP55](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-55.md)-encoded address of the token we are trading in the channel
    * @type {string}
    * @memberof ChannelPartial
    */
   tokenAddress: string;
   /**
-   * Amount of the token_address token we have deposited into the contract for this channel.
+   * Amount of the `token_address` token we have deposited into the contract for this channel.
    * @type {number}
    * @memberof ChannelPartial
    */
