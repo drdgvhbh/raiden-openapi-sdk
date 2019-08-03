@@ -803,6 +803,12 @@ components:
         log_time:
           type: string
           example: "2018-10-30T07:03:52.193"
+      required:
+        - event
+        - amount
+        - initiator
+        - identifier
+        - log_time
     TotalWithdraw:
       type: integer
       example: 5000000

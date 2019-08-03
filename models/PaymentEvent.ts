@@ -21,31 +21,31 @@ export interface PaymentEvent {
    * @type {string}
    * @memberof PaymentEvent
    */
-  event?: PaymentEventEventEnum;
+  event: PaymentEventEventEnum;
   /**
    *
    * @type {number}
    * @memberof PaymentEvent
    */
-  amount?: number;
+  amount: number;
   /**
    *
    * @type {string}
    * @memberof PaymentEvent
    */
-  initiator?: string;
+  initiator: string;
   /**
    *
    * @type {number}
    * @memberof PaymentEvent
    */
-  identifier?: number;
+  identifier: number;
   /**
    *
    * @type {string}
    * @memberof PaymentEvent
    */
-  logTime?: string;
+  logTime: string;
 }
 
 /**
