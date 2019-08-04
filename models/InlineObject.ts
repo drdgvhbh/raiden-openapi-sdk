@@ -23,12 +23,6 @@ export interface InlineObject {
    */
   totalDeposit?: number;
   /**
-   * The increased total withdrawal
-   * @type {number}
-   * @memberof InlineObject
-   */
-  totalWithdraw?: number;
-  /**
    * Desired new state
    * @type {string}
    * @memberof InlineObject

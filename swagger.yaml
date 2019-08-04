@@ -302,8 +302,6 @@ paths:
               properties:
                 total_deposit:
                   $ref: '#/components/schemas/IncreaseDeposit'
-                total_withdraw:
-                  $ref: '#/components/schemas/IncreaseWithdraw'
                 state:
                   type: string
                   enum: ['closed']
@@ -316,7 +314,7 @@ paths:
               schema: 
                 $ref: '#/components/schemas/Channel'
         '400':
-          description: "The provided JSON is in some way malformed, or there is nothing to do since none of `state`,`total_deposit` or `total_withdraw` have been given, or: the value of `state` is not a valid channel state."
+          description: "The provided JSON is in some way malformed, or there is nothing to do since none of `state` or `total_deposit` have been given, or: the value of `state` is not a valid channel state."
           content:
             application/json:
               schema: 
@@ -340,7 +338,7 @@ paths:
               schema: 
                 $ref: '#/components/schemas/Errors'
         '409': 
-          description: "Provided channel does not exist or `state`, `total_deposit`, and `total_withdraw` have been attempted to update in the same request or attempt to deposit token amount lower than on-chain balance of the channel attempt to deposit more tokens than the testing limit"
+          description: "Provided channel does not exist or `state` and `total_deposit` have been attempted to update in the same request or attempt to deposit token amount lower than on-chain balance of the channel attempt to deposit more tokens than the testing limit"
           content:
             application/json:
               schema: 
@@ -816,17 +814,9 @@ components:
         - initiator
         - identifier
         - log_time
-    TotalWithdraw:
-      type: integer
-      example: 5000000
-      description: "Amount of the `token_address` token we have withdrawn into the contract for this channel."
     TotalDeposit:
       type: integer
       description: "Amount of the `token_address` token we have deposited into the contract for this channel."
-      example: 35000000
-    IncreaseWithdraw:
-      type: integer
-      description: "The increased total withdrawal"
       example: 35000000
     IncreaseDeposit:
       type: integer
@@ -908,8 +898,6 @@ components:
               type: integer
               description: "Amount of the `token_address` token we have available for payments."
               example: 25000000
-            total_withdraw:
-              $ref: '#/components/schemas/TotalWithdraw'
             state:
               $ref: '#/components/schemas/ChannelState'
             reveal_timeout:
@@ -920,7 +908,6 @@ components:
             - channel_identifier
             - token_network_identifier
             - balance
-            - total_withdraw
             - state
             - reveal_timeout
     Partner:
