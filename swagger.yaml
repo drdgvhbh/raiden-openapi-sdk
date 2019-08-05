@@ -786,12 +786,20 @@ components:
         identifier:
           type: number
           example: 42
+        secret:
+          type: string
+          example: "0x98af0f136712bc9bf89de637b2c4816e6a0dc4c8b92e7ced448fd5806ea64502"
+        secret_hash:
+          type: string
+          example: "0x028b9cf7aef01c94ab85eb26915dc24cd47dba955317f5a1fb02f2ba6014e93b"
       required: 
         - initiator_address
         - target_address
         - token_address
         - amount
         - identifier
+        - secret
+        - secret_hash
     PaymentEvent:
       type: object
       properties:

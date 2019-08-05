@@ -46,4 +46,16 @@ export interface PaymentReceipt {
    * @memberof PaymentReceipt
    */
   identifier: number;
+  /**
+   *
+   * @type {string}
+   * @memberof PaymentReceipt
+   */
+  secret: string;
+  /**
+   *
+   * @type {string}
+   * @memberof PaymentReceipt
+   */
+  secretHash: string;
 }
