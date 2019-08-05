@@ -9,8 +9,19 @@
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drdgvhbh/raiden-swagger-sdk.git"
+  },
+  "keywords": [
+    "payments",
+    "raiden"
+  ],
+  "author": "Ryan Lee (drdgvhbh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drdgvhbh/raiden-swagger-sdk/issues"
+  },
   "dependencies": {
     "rxjs": "^6.5.2"
   }
