@@ -65,7 +65,7 @@ export interface Channel {
    * @type {number}
    * @memberof Channel
    */
-  totalWithdraw: number;
+  totalWithdraw?: number;
   /**
    *
    * @type {ChannelState}
