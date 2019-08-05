@@ -1,5 +1,5 @@
 {
-  "name": "raiden-swagger-sdk",
+  "name": "raiden-openapi-sdk",
   "version": "1.0.0",
   "description": "Swagger generated sdk",
   "main": "dist/index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/drdgvhbh/raiden-swagger-sdk.git"
+    "url": "git+https://github.com/drdgvhbh/raiden-openapi-sdk.git"
   },
   "keywords": [
     "payments",
@@ -20,7 +20,7 @@
   "author": "Ryan Lee (drdgvhbh)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/drdgvhbh/raiden-swagger-sdk/issues"
+    "url": "https://github.com/drdgvhbh/raiden-openapi-sdk/issues"
   },
   "dependencies": {
     "rxjs": "^6.5.2"
