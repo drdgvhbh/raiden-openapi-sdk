@@ -1,6 +1,6 @@
 # Raiden OpenAPI SDK
 
-This project is an typescript SDK for the [Raiden API](https://raiden-network.readthedocs.io/en/stable/rest_api.html). It was generated using [openapi-generator](https://github.com/OpenAPITools/openapi-generator) from the [swagger](./swagger.yaml) file I made.
+This project is an typescript SDK for the [Raiden API](https://raiden-network.readthedocs.io/en/latest/rest_api.html). It was generated using [openapi-generator](https://github.com/OpenAPITools/openapi-generator) from the [swagger](./swagger.yaml) file I made.
 
 This is a low level entrypoint for the API. You can find the higher level abstraction [here](https://github.com/drdgvhbh/raiden-api-sdk).
 

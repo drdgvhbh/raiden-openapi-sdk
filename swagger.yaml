@@ -1,7 +1,7 @@
 openapi: 3.0.2
 info: 
   title: Raiden API
-  description: https://raiden-network.readthedocs.io/en/stable/rest_api.html
+  description: https://raiden-network.readthedocs.io/en/latest/rest_api.html
   version: 1.0.0
 servers:
   - url: http://127.0.0.1:5001/api/v1

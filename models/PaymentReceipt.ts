@@ -1,7 +1,7 @@
 // tslint:disable
 /**
  * Raiden API
- * https://raiden-network.readthedocs.io/en/stable/rest_api.html
+ * https://raiden-network.readthedocs.io/en/latest/rest_api.html
  *
  * The version of the OpenAPI document: 1.0.0
  *
