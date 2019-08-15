@@ -8,6 +8,10 @@ This is a low level entrypoint for the API. You can find the higher level abstra
 
 `npm install raiden-openapi-sdk`
 
+## Documentation
+
+http://raiden-openapi.drdgvhbh.site/
+
 ## Usage
 
 ```typescript
